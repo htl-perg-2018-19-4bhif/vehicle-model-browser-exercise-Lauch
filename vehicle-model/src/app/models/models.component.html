@@ -1,0 +1,23 @@
+<h2>Models Page</h2>
+
+<div>
+    <select [(ngModel)]="year">
+        <option></option>
+        <option *ngFor="let year of years"> {{ year }} </option>
+    </select>
+
+    <select [(ngModel)]="make">
+        <option></option>
+        <option *ngFor="let make of makes"> {{ make }} </option>
+    </select>
+
+    <button (click)="refresh()">Refresh</button>
+
+    <table class="center">
+        <tr *ngFor="let Filtered of ergebnis">
+            <td> {{ Filtered.year }} </td>
+            <td> {{ Filtered.make }} </td>
+            <td> {{ Filtered.model }}</td>
+        </tr>
+    </table>
+</div>
